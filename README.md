@@ -7,14 +7,14 @@
 ## Usage
 
 ```js
-import piggyBack from 'piggybacker'
+import piggyback from 'piggybacker'
 
 async function fetchJSON (url) {
   const res = await window.fetch(url)
   return res.json()
 }
 
-const piggyFetchJSON = piggyBack(
+const piggyFetchJSON = piggyback(
   fetchJSON,
   // Given the args that will be passed to fetchJSON, generate a key so that if
   // a second call is made while the first is in flight then the second will
@@ -39,7 +39,7 @@ const results = await Promise.all([
 
 ## API
 
-### `piggyBack(fn, getKey)`
+### `piggyback(fn, getKey)`
 
 Create a new function that'll call `fn` and piggyback on the results if called again.
 

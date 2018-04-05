@@ -1,4 +1,4 @@
-export default function piggyBack (fn, getKey) {
+export default function piggyback (fn, getKey) {
   getKey = getKey || (() => fn.name)
 
   const jobs = new Map()
