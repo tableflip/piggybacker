@@ -1,0 +1,47 @@
+{
+  "name": "piggybacker",
+  "version": "0.0.0",
+  "description": "Async keyed job runner, piggyback on results from running jobs with the same key",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "run-p build:*",
+    "build:js": "babel src --out-dir lib --source-maps",
+    "watch": "run-p watch:*",
+    "watch:js": "babel --watch src --out-dir lib --source-maps",
+    "test": "run-s lint test:*",
+    "test:ava": "nyc --reporter=lcov --reporter=text ava",
+    "lint": "standard",
+    "clean": "rm -rf lib/**",
+    "prepublishOnly": "run-s build"
+  },
+  "keywords": [
+    "piggyback",
+    "batch",
+    "job",
+    "runner"
+  ],
+  "author": "Alan Shaw",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "ava": "^0.25.0",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.6.0",
+    "standard": "^11.0.1"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tableflip/piggybacker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tableflip/piggybacker/issues"
+  },
+  "homepage": "https://github.com/tableflip/piggybacker#readme"
+}
