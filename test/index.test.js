@@ -1,6 +1,6 @@
 import test from 'ava'
 import createJob from './helpers/job'
-import piggyback from '../'
+import { piggyback } from '../'
 
 test('should run a job', async t => {
   const key = 'TEST'

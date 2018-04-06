@@ -1,4 +1,4 @@
-export default function piggyback (fn, getKey) {
+export function piggyback (fn, getKey) {
   getKey = getKey || (() => fn.name)
 
   const jobs = new Map()
@@ -15,8 +15,8 @@ export default function piggyback (fn, getKey) {
     }
 
     job = {
-      onComplete: new JobEvent('onComplete'),
-      onError: new JobEvent('onError')
+      onComplete: new Event('onComplete'),
+      onError: new Event('onError')
     }
 
     jobs.set(key, job)
@@ -34,7 +34,7 @@ export default function piggyback (fn, getKey) {
   }
 }
 
-class JobEvent {
+class Event {
   constructor (name) {
     this._name = name
     this._listeners = []

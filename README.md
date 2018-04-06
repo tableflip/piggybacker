@@ -7,7 +7,7 @@
 ## Usage
 
 ```js
-import piggyback from 'piggybacker'
+import { piggyback } from 'piggybacker'
 
 async function fetchJSON (url) {
   const res = await window.fetch(url)
