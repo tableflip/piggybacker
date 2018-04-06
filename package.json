@@ -1,6 +1,6 @@
 {
   "name": "piggybacker",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Async keyed job runner, piggyback on results from running jobs with the same key",
   "main": "lib/index.js",
   "scripts": {
